@@ -39,7 +39,7 @@ for(let i = 0; i < operators.length; i++) {
 
         //avoid having multiple operators one after the other
 
-        if((!arrOp.includes(op) && arrOp[arrOp.length-1] === num || !arrOp.includes(op) && arrOp[arrOp.length-1].includes(total)) || (arrOp.includes(op) && arrOp[arrOp.length-1] !== op && arrOp[arrOp.length-1] !== num) || (arrOp.includes(op) && arrOp[arrOp.length-1] !== op))  {
+        if((!arrOp.includes(op) && arrOp[arrOp.length-1] === num || !arrOp.includes(op) && arrOp[arrOp.length-1].includes(total)) || (arrOp.includes(op) && arrOp[arrOp.length-1] === num))  {
             arrOp.push( op)
         }
         resultNum.textContent = arrOp.join('')
@@ -54,7 +54,7 @@ function resetResult() {
 //delete nums starting from the last one and show the array on display if it is > 0, otherwise show 0
 function deleteNum() {
     arrOp.splice( -1, 1);
-    resultNum.textContent = (arrOp.join('') > 0 ? arrOp.join('') : 0)
+    resultNum.textContent = (arrOp.length > 0 ? arrOp.join('') : 0)
 }
 
 equals.addEventListener('click', outputResult)
