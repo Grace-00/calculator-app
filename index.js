@@ -39,8 +39,8 @@ for(let i = 0; i < operators.length; i++) {
 
         //avoid having multiple operators one after the other
 
-        if((!arrOp.includes(op) && arrOp[arrOp.length-1] === num || !arrOp.includes(op) && arrOp[arrOp.length-1].includes(total)) || (arrOp.includes(op) && arrOp[arrOp.length-1] === num))  {
-            arrOp.push( op)
+        if ((!arrOp.includes(op) && arrOp.length === 0) || (!arrOp.includes(op) && arrOp[arrOp.length-1] === num || !arrOp.includes(op) && arrOp[arrOp.length-1].includes(total)) || (arrOp.includes(op) && arrOp[arrOp.length-1] === num))  {
+            arrOp.push(op)
         }
         resultNum.textContent = arrOp.join('')
     })
