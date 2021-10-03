@@ -25,7 +25,6 @@ for (let i = 0; i < nums.length; i++) {
 
 dot.addEventListener('click', () => {
     if (arrOp[arrOp.length - 1] === num ) {
-        console.log('dot')
         arrOp.push(dot.textContent)
     }
     resultNum.textContent = arrOp.length > 0 ? arrOp.join('') : 0;
