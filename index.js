@@ -25,7 +25,8 @@ for (let i = 0; i < nums.length; i++){
 //outputting result by showing it on display and pushing the total in the array to make other operations
 function outputResult() {
     resultNum.textContent = eval(resultNum.textContent)
-    total = eval(resultNum.textContent)
+    total = eval(resultNum.textContent).toFixed(2)
+    resultNum.textContent = total
     if(total){
         arrOp = []
         arrOp.push(String(total))
