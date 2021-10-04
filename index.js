@@ -18,8 +18,16 @@ for (let i = 0; i < nums.length; i++) {
     nums[i].addEventListener('click', () => {
         num = nums[i].textContent;
         resultNum.textContent = num
-        arrOp.push(num)
+        if(arrOp.length < 20) {
+            arrOp.push(num)
+            if((arrOp.length > 10 && arrOp.length < 20)) {
+                console.log(arrOp[arrOp.length-1])
+                console.log(arrOp)
+                resultNum.style.display = 'inline-block'
+            }
+        }
         resultNum.textContent = arrOp.join('');
+        console.log(resultNum.textContent)
     })
 }
 
